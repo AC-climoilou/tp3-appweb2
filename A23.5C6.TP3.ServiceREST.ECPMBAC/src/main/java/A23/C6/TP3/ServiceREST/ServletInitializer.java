@@ -1,4 +1,4 @@
-package A23.C6.TP3.ServiceREST.ECPMBAC.A23.C6.TP3.ServiceREST.ECPMBAC;
+package A23.C6.TP3.ServiceREST;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
