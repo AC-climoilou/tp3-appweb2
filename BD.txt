@@ -1,5 +1,4 @@
 create table route (
 	id int  auto_increment primary key,
-    nom varchar(255),
     route varchar(255)
 );
