@@ -1,9 +1,9 @@
-package A23.C6.TP3.ServiceREST.ECPMBAC.A23.C6.TP3.ServiceREST.ECPMBAC.route;
+package A23.C6.TP3.ServiceREST.route;
 
-public class Route {
+public class TP3Route {
     private String route;
 
-    public Route(String route) {
+    public TP3Route(String route) {
         super();
         this.route = route;
     }
