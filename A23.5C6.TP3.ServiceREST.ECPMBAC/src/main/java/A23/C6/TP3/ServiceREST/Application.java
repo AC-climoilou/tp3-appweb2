@@ -17,7 +17,6 @@ public class Application {
 		int test2 = 0;
 
 
-		RequeteRESTRoute.getLatitudeLongitudeWithAdresse("180 9em rue");
 
 	}
 

@@ -33,7 +33,7 @@ public class RequeteRESTRoute {
             }
 
             in.close();
-            System.out.println(inputLine);
+            System.out.println(content);
         } catch (IOException eIo) {
             System.out.println(eIo.getMessage());
         }
