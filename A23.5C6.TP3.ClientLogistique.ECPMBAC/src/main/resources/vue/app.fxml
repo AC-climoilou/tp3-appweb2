@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controleur.AppControleurFX">
+   <children>
+      <VBox prefHeight="750.0" prefWidth="500.0">
+         <children>
+            <ListView fx:id="listViewAdresses" prefHeight="700.0" prefWidth="500.0" />
+            <Button mnemonicParsing="false" onAction="#chargerOnClick" prefHeight="100.0" prefWidth="500.0" text="CHARGER LES ADRESSES" />
+         </children>
+      </VBox>
+      <VBox layoutX="500.0" prefHeight="750.0" prefWidth="500.0">
+         <children>
+            <ListView fx:id="listViewRoute" prefHeight="700.0" prefWidth="500.0" />
+            <Button mnemonicParsing="false" onAction="#genererOnClick" prefHeight="100.0" prefWidth="500.0" text="GÉNÉRER LA ROUTE OPTIMALE" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
