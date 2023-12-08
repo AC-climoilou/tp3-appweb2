@@ -1,6 +1,9 @@
+/*
 package A23.C6.TP3.ServiceREST.database;
 
 
+import A23.C6.TP3.ServiceREST.route.Route;
+import A23.C6.TP3.ServiceREST.route.TP3RouteRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 import javax.sql.DataSource;
@@ -24,3 +27,4 @@ public class DatabaseManager {
     }
 }
 
+*/

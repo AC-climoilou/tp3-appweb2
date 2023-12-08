@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="edba78ce-cced-4c2a-a518-e914ca7b0bdf" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/A23.5C6.TP3.ServiceREST.ECPMBAC/src/main/java/A23/C6/TP3/ServiceREST/route/RequeteRESTRoute.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/A23.5C6.TP3.ServiceREST.ECPMBAC/src/main/java/A23/C6/TP3/ServiceREST/route/ServiceRoutes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/A23.5C6.TP3.ServiceREST.ECPMBAC/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/A23.5C6.TP3.ServiceREST.ECPMBAC/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/A23.5C6.TP3.ServiceREST.ECPMBAC/src/main/java/A23/C6/TP3/ServiceREST/LectureJSON/JsonManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/A23.5C6.TP3.ServiceREST.ECPMBAC/src/main/java/A23/C6/TP3/ServiceREST/LectureJSON/JsonManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/A23.5C6.TP3.ServiceREST.ECPMBAC/src/main/java/A23/C6/TP3/ServiceREST/ServiceRest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/A23.5C6.TP3.ServiceREST.ECPMBAC/src/main/java/A23/C6/TP3/ServiceREST/database/DatabaseManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/A23.5C6.TP3.ServiceREST.ECPMBAC/src/main/java/A23/C6/TP3/ServiceREST/database/DatabaseManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/A23.5C6.TP3.ServiceREST.ECPMBAC/src/main/java/A23/C6/TP3/ServiceREST/database/Route.java" beforeDir="false" afterPath="$PROJECT_DIR$/A23.5C6.TP3.ServiceREST.ECPMBAC/src/main/java/A23/C6/TP3/ServiceREST/route/Route.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/A23.5C6.TP3.ServiceREST.ECPMBAC/src/main/java/A23/C6/TP3/ServiceREST/database/TP3RouteRowMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/A23.5C6.TP3.ServiceREST.ECPMBAC/src/main/java/A23/C6/TP3/ServiceREST/route/TP3RouteRowMapper.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="2ZGwzdGBvhpnuQqB6NmnCekGDyR" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/Utilisateur/Documents/GitHub/tp3-appweb2/A23.5C6.TP3.ServiceREST.ECPMBAC"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="edba78ce-cced-4c2a-a518-e914ca7b0bdf" name="Changes" comment="" />
+      <created>1702061987292</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1702061987292</updated>
+    </task>
+    <servers />
+  </component>
+</project>

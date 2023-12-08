@@ -1,7 +1,8 @@
-package A23.C6.TP3.ServiceREST.database;
+package A23.C6.TP3.ServiceREST.route;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+import A23.C6.TP3.ServiceREST.route.Route;
 import org.springframework.jdbc.core.RowMapper;
 
 public class TP3RouteRowMapper implements RowMapper<Route> {

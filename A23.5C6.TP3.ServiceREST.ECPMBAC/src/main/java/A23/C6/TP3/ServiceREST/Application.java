@@ -1,6 +1,7 @@
 package A23.C6.TP3.ServiceREST;
 
 import A23.C6.TP3.ServiceREST.LectureJSON.*;
+import A23.C6.TP3.ServiceREST.route.RequeteRESTRoute;
 import org.json.simple.JSONArray;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -14,6 +15,10 @@ public class Application {
 		JSONArray json = test.getClientsFromJson();
 		Entrepot entrepot = test.getEntrepot();
 		int test2 = 0;
+
+//		RequeteRESTRoute requetes = new RequeteRESTRoute();
+
+
 	}
 
 	private String nom;

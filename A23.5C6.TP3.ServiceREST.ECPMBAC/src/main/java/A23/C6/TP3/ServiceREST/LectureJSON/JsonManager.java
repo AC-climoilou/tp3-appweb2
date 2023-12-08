@@ -3,7 +3,6 @@ package A23.C6.TP3.ServiceREST.LectureJSON;
 import org.json.simple.*;
 import org.json.simple.parser.JSONParser;
 
-import javax.json.JsonReader;
 import java.io.*;
 import java.util.Scanner;
 
