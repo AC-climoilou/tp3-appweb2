@@ -1,7 +1,6 @@
 package A23.C6.TP3.ServiceREST;
 
 import A23.C6.TP3.ServiceREST.LectureJSON.*;
-import A23.C6.TP3.ServiceREST.route.RequeteRESTRoute;
 import org.json.simple.JSONArray;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
