@@ -4,15 +4,27 @@ import java.sql.SQLException;
 
 import org.springframework.jdbc.core.RowMapper;
 
+/**
+ * permet de mapper les rows de la database avec la class de representation Route
+ * qui trenscrit la table MySQL en java
+ * permet que jdnc puisse reconetre nos columns MySQL dans nottre table
+ */
 public class TP3RouteRowMapper implements RowMapper<Route> {
 
+    /**
+     * Map chaque rows de la table avec nottre classe representative
+     * @param rs
+     * @param rowNum
+     * @return
+     * @throws SQLException
+     */
     @Override
     public Route mapRow(ResultSet rs, int rowNum) throws SQLException {
-        Route TP3Route = new Route();
-        TP3Route.setId(rs.getLong("id"));
-        TP3Route.setRoute(rs.getString("route"));
+        Route route = new Route();
+        route.setId(rs.getLong("id"));
+        route.setRoute(rs.getString("route"));
 
-        return TP3Route;
+        return route;
     }
 }
 

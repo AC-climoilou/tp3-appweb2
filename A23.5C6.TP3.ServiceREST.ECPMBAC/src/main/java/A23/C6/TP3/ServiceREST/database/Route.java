@@ -1,6 +1,9 @@
 package A23.C6.TP3.ServiceREST.database;
 import java.io.Serializable;
 
+/**
+ * trenslation de la table MySQL en classe java pour les opperations jdbc
+ */
 public class Route implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -30,6 +33,14 @@ public class Route implements Serializable {
 
     public void setRoute(String route) {
         this.route = route;
+    }
+
+    @Override
+    public String toString() {
+        return "Route{" +
+                "id=" + id +
+                ", route='" + route + '\'' +
+                '}';
     }
 }
 
