@@ -2,7 +2,6 @@ package A23.C6.TP3.ServiceREST;
 
 import A23.C6.TP3.ServiceREST.LectureJSON.*;
 import A23.C6.TP3.ServiceREST.database.DatabaseManager;
-import A23.C6.TP3.ServiceREST.database.Route;
 import A23.C6.TP3.ServiceREST.route.RequeteRESTRoute;
 import org.json.simple.JSONArray;
 import org.springframework.boot.CommandLineRunner;
@@ -23,6 +22,7 @@ public class Application {
 		Entrepot entrepot = test.getEntrepot();
 		int test2 = 0;
 
+		float[] test3 = RequeteRESTRoute.getAdresse("180 9em rue quebec");
 	}
 
 	/**

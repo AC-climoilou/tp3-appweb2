@@ -1,17 +1,20 @@
 package A23.C6.TP3.ServiceREST.route;
 
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
 import java.net.URL;
 
 
 public class RequeteRESTRoute {
     private static HttpURLConnection conn;
 
-    public static int[] getLatitudeLongitudeWithAdresse(String adresse) {
+    public String[] getAdresse(String adresse) {
 
 
         try {
@@ -34,9 +37,20 @@ public class RequeteRESTRoute {
 
             in.close();
             System.out.println(content);
-        } catch (IOException eIo) {
+
+            JSONObject json = (JSONObject) new JSONParser().parse(content);
+
+            float[] coordonees = new float[2];
+            coordonees = (float[]) json.get("feature");
+        }
+        catch (IOException eIo) {
             System.out.println(eIo.getMessage());
         }
-        return new int[2];
+        catch(ParseException pe)
+        {
+            System.out.println(pe.getMessage());
+        }
+
+        return null;
     }
 }
