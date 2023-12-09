@@ -1,4 +1,4 @@
-package A23.C6.TP3.ServiceREST.route;
+package A23.C6.TP3.ServiceREST.database;
 import java.io.Serializable;
 
 public class Route implements Serializable {
