@@ -5,6 +5,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controleur.AppControleurFX">
    <children>
@@ -13,16 +14,32 @@
             <Font size="24.0" />
          </font>
       </Button>
-      <VBox prefHeight="750.0" prefWidth="475.0">
+      <VBox alignment="TOP_CENTER" prefHeight="750.0" prefWidth="475.0">
          <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Adresses des clients">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
             <ListView fx:id="listViewAdresses" prefHeight="700.0" prefWidth="500.0" />
-            <Button mnemonicParsing="false" onAction="#chargerOnClick" prefHeight="100.0" prefWidth="500.0" text="CHARGER LES ADRESSES" />
+            <Button mnemonicParsing="false" onAction="#chargerOnClick" prefHeight="100.0" prefWidth="500.0" text="CHARGER LES ADRESSES">
+               <font>
+                  <Font size="20.0" />
+               </font></Button>
          </children>
       </VBox>
-      <VBox layoutX="525.0" prefHeight="750.0" prefWidth="475.0">
+      <VBox alignment="TOP_CENTER" layoutX="525.0" prefHeight="750.0" prefWidth="475.0">
          <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Adresses séléctionnées">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
             <ListView fx:id="listViewRoute" prefHeight="700.0" prefWidth="500.0" />
-            <Button mnemonicParsing="false" onAction="#genererOnClick" prefHeight="100.0" prefWidth="500.0" text="GÉNÉRER LA ROUTE OPTIMALE" />
+            <Button mnemonicParsing="false" onAction="#genererOnClick" prefHeight="100.0" prefWidth="500.0" text="GÉNÉRER LA ROUTE OPTIMALE">
+               <font>
+                  <Font size="20.0" />
+               </font></Button>
          </children>
       </VBox>
    </children>
