@@ -22,7 +22,6 @@ public class Application {
 		Entrepot entrepot = test.getEntrepot();
 		int test2 = 0;
 
-		float[] test3 = RequeteREST.getAdresse("180 9em rue quebec");
 	}
 
 	/**

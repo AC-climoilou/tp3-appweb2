@@ -5,6 +5,7 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.io.BufferedReader;
@@ -18,8 +19,8 @@ import java.net.URL;
 public class RequeteREST {
 
 /*
-    @GetMapping
-    public String[] getAdresse(String adresse)
+    @GetMapping(value = "getSearchAdresse/{adresse}")
+    public String[] getAdresse(@PathVariable String adresse)
     {
 
     }

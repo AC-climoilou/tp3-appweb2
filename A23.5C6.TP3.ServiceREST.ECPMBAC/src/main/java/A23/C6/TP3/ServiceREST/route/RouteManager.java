@@ -14,10 +14,10 @@ import java.net.URL;
 
 public class RouteManager
 {
-    public static String GetOptimizesRoute()
+    public static String GetAdresse(String recherche)
     {
         try {
-            String chaineUrl = "https://api.openrouteservice.org/geocode/search?api_key=5b3ce3597851110001cf6248434d4e24e8434f72b2d7c372f4754ba7&text=";
+            String chaineUrl = "https://api.openrouteservice.org/geocode/search?api_key=5b3ce3597851110001cf6248434d4e24e8434f72b2d7c372f4754ba7&text=" + recherche;
             chaineUrl = chaineUrl.replaceAll(" ", "+");
 
             System.out.println(chaineUrl);
