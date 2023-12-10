@@ -12,12 +12,12 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-public class RouteManager {
-    public static String GetOptimizesRoute() {
-
-
+public class RouteManager
+{
+    public static String GetOptimizesRoute()
+    {
         try {
-            String chaineUrl = "https://api.openrouteservice.org/geocode/search?api_key=5b3ce3597851110001cf6248434d4e24e8434f72b2d7c372f4754ba7&text=" + adresse;
+            String chaineUrl = "https://api.openrouteservice.org/geocode/search?api_key=5b3ce3597851110001cf6248434d4e24e8434f72b2d7c372f4754ba7&text=";
             chaineUrl = chaineUrl.replaceAll(" ", "+");
 
             System.out.println(chaineUrl);
@@ -72,8 +72,6 @@ public class RouteManager {
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
             conn.setDoOutput(true);
             conn.setRequestMethod("POST");
-
-
         }
         catch(MalformedURLException eURL)
         {

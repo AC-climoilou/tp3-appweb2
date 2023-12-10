@@ -4,6 +4,8 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -12,12 +14,15 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-
+@RestController
 public class RequeteREST {
 
-    
-    public String[] getAdresseInterne(String adresse) {
+/*
+    @GetMapping
+    public String[] getAdresse(String adresse)
+    {
 
-
+    }
+*/
 
 }
