@@ -2,7 +2,7 @@ package A23.C6.TP3.ServiceREST;
 
 import A23.C6.TP3.ServiceREST.LectureJSON.*;
 import A23.C6.TP3.ServiceREST.database.DatabaseManager;
-import A23.C6.TP3.ServiceREST.route.RequeteRESTRoute;
+import A23.C6.TP3.ServiceREST.route.RequeteREST;
 import org.json.simple.JSONArray;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -22,7 +22,7 @@ public class Application {
 		Entrepot entrepot = test.getEntrepot();
 		int test2 = 0;
 
-		float[] test3 = RequeteRESTRoute.getAdresse("180 9em rue quebec");
+		float[] test3 = RequeteREST.getAdresse("180 9em rue quebec");
 	}
 
 	/**
