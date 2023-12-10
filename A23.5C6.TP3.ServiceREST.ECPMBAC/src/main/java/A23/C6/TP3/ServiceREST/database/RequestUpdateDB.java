@@ -19,7 +19,7 @@ public class RequestUpdateDB {
         DatabaseManager databaseManager = new DatabaseManager(new JdbcTemplate());
         Route route = databaseManager.getRouteEntity().get(0);
         JSONArray jsRoute = new JSONArray();
-        jsRoute.add(route);
+        jsRoute.add(route.getRoute());
         return new ResponseEntity<JSONArray>(jsRoute, HttpStatus.OK);
     }
 
