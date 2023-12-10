@@ -1,21 +1,51 @@
 package modele;
 
+import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ConsommationRest {
 
 	private HttpURLConnection con;
 
-	public String getALL() {
-		return GET("http://10.1.4.120:8080/WarPersonne-prod/personnes");
+	public List<String> getAllClientsDetails() {
+		String response = GET("http://localhost:8080/getClients");
+		return parseClientsDetails(response);
 	}
 
-	public String getRouteOptimale(int id) {
-		return GET("http://10.1.4.120:8080/WarPersonne-prod/personne/" + id);
+	private List<String> parseClientsDetails(String jsonResponse) {
+		List<String> clientsDetails = new ArrayList<>();
+
+		try {
+			JSONParser parser = new JSONParser();
+			JSONArray clientsArray = (JSONArray) parser.parse(jsonResponse);
+
+			for (Object obj : clientsArray) {
+				JSONObject clientObject = (JSONObject) obj;
+				JSONArray clients = (JSONArray) clientObject.get("clients");
+
+				for (Object client : clients) {
+					JSONObject clientDetails = (JSONObject) client;
+					String clientName = (String) clientDetails.get("nom");
+					String clientAddress = (String) clientDetails.get("adresse");
+					String clientDetailsString = clientName + " - " + clientAddress;
+					clientsDetails.add(clientDetailsString);
+				}
+			}
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
+		return clientsDetails;
 	}
 
 	private String GET(String url) {
@@ -29,24 +59,24 @@ public class ConsommationRest {
 
 			BufferedReader in = new BufferedReader(new InputStreamReader(con.getInputStream()));
 			String inputLine;
-			content = new String();
+			StringBuilder contentBuilder = new StringBuilder();
 
 			while ((inputLine = in.readLine()) != null) {
-				content += (inputLine);
+				contentBuilder.append(inputLine);
 			}
 
 			in.close();
+			content = contentBuilder.toString();
 
 		} catch (FileNotFoundException e) {
 			content = "Aucun resultat";
 		} catch (IOException e) {
 			content = "Aucun resultat";
-		}
-
-		finally {
-			con.disconnect();
+		} finally {
+			if (con != null) {
+				con.disconnect();
+			}
 		}
 		return content;
-
 	}
 }

@@ -4,17 +4,22 @@
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
-
+<?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controleur.AppControleurFX">
    <children>
-      <VBox prefHeight="750.0" prefWidth="500.0">
+      <Button layoutX="475.0" layoutY="273.0" mnemonicParsing="false" onAction="#ajouterAdresseOnClick" prefHeight="50.0" prefWidth="50.0" text="&gt;">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <VBox prefHeight="750.0" prefWidth="475.0">
          <children>
             <ListView fx:id="listViewAdresses" prefHeight="700.0" prefWidth="500.0" />
             <Button mnemonicParsing="false" onAction="#chargerOnClick" prefHeight="100.0" prefWidth="500.0" text="CHARGER LES ADRESSES" />
          </children>
       </VBox>
-      <VBox layoutX="500.0" prefHeight="750.0" prefWidth="500.0">
+      <VBox layoutX="525.0" prefHeight="750.0" prefWidth="475.0">
          <children>
             <ListView fx:id="listViewRoute" prefHeight="700.0" prefWidth="500.0" />
             <Button mnemonicParsing="false" onAction="#genererOnClick" prefHeight="100.0" prefWidth="500.0" text="GÉNÉRER LA ROUTE OPTIMALE" />
