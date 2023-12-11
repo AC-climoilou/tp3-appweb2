@@ -4,7 +4,7 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.ListView;
 import javafx.scene.control.SelectionMode;
-import modele.Adresse;
+import modele.ConsommationRest;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,20 +18,24 @@ public class AppControleurFX {
     @FXML
     private ListView<String> listViewRoute;
 
-    private List<Adresse> adresseList;
+    private ConsommationRest consommationRest;
+
+    private List<String> adresseList;
+    private List<String> selectionList;
 
     // Méthodes
     // Charge les adresses de la bd
     @FXML
     public void chargerOnClick(){
-        for (Adresse adresse : adresseList) {
-            listViewAdresses.getItems().add(adresse.getCoordonnees());
+        listViewAdresses.getItems().clear();
+
+        for (String s : adresseList) {
+            listViewAdresses.getItems().add(s);
         }
     }
 
-    // Genere la route optimale en fonction des adresses selectionnées
     @FXML
-    public void genererOnClick(){
+    public void ajouterAdresseOnClick(){
         ObservableList<String> selectedItems = listViewAdresses.getSelectionModel().getSelectedItems();
 
         for (String coordonnees: selectedItems) {
@@ -41,20 +45,22 @@ public class AppControleurFX {
         }
     }
 
+    // Genere la route optimale en fonction des adresses selectionnées
+    @FXML
+    public void genererOnClick(){
+        selectionList = listViewRoute.getItems();
+
+
+    }
+
     @FXML
     public void initialize(){
         listViewAdresses.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
 
         adresseList = new ArrayList<>();
 
-        Adresse adresse1 = new Adresse("123");
-        Adresse adresse2 = new Adresse("345");
-        Adresse adresse3 = new Adresse("567");
-        Adresse adresse4 = new Adresse("789");
+        consommationRest = new ConsommationRest();
 
-        adresseList.add(adresse1);
-        adresseList.add(adresse2);
-        adresseList.add(adresse3);
-        adresseList.add(adresse4);
+        adresseList = consommationRest.getAllClientsDetails();
     }
 }
