@@ -12,7 +12,6 @@ import java.util.ArrayList;
 @RestController
 public class RequeteRESTClient {
 
-    @CrossOrigin(origins = "http://localhost:3000")
     @GetMapping(value = "getClients")
     public ResponseEntity<JSONArray> getClients()
     {

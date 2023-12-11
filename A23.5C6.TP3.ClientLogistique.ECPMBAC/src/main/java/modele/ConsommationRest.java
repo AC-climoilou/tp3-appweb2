@@ -5,14 +5,13 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Consomme le service REST
@@ -95,5 +94,45 @@ public class ConsommationRest {
 			}
 		}
 		return content;
+	}
+
+	public boolean PUT() {
+		try {
+			URL url = new URL("http://localhost:8080/putRoute");
+			HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+			conn.setDoOutput(true);
+			conn.setRequestMethod("PUT");
+			conn.setRequestProperty("Content-Type", "application/json");
+
+			// Prepare the data to be sent in the body of the request
+			JSONObject obj = new JSONObject();
+			Map<String, String> maMap = new HashMap<>();
+			maMap.put("age", "70");
+			maMap.put("nom", "Gerard");
+			maMap.put("prenom", "Jean");
+
+			obj.putAll(maMap);
+
+			OutputStream os = conn.getOutputStream();
+			os.write(obj.toString().getBytes());
+			os.flush();
+
+			if (conn.getResponseCode() != HttpURLConnection.HTTP_CREATED) {
+				throw new RuntimeException("Failed : HTTP error code : " + conn.getResponseCode());
+			}
+
+			BufferedReader br = new BufferedReader(new InputStreamReader((conn.getInputStream())));
+
+			String output;
+			System.out.println("Output from Server .... \n");
+			while ((output = br.readLine()) != null) {
+				System.out.println(output);
+			}
+			conn.disconnect();
+		} catch (IOException e) {
+			e.printStackTrace();
+			return false;
+		}
+		return true;
 	}
 }

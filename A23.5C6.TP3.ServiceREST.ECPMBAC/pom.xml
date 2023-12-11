@@ -9,8 +9,8 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>A23.5C6.TP3.ServiceREST.ECPMBAC</groupId>
-	<artifactId>A23.5C6.TP3.ServiceREST.ECPMBAC</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<artifactId>tp3</artifactId>
+	<version>prod</version>
 	<packaging>war</packaging>
 	<name>A23.5C6.TP3.ServiceREST.ECPMBAC</name>
 	<description>TP3 AppWeb2</description>
