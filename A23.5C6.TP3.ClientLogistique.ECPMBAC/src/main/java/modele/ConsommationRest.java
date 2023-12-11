@@ -14,15 +14,27 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Consomme le service REST
+ */
 public class ConsommationRest {
 
 	private HttpURLConnection con;
 
+	/**
+	 * Consomme le GET getClients du Service REST
+	 * @return response du service REST
+	 */
 	public List<String> getAllClientsDetails() {
 		String response = GET("http://localhost:8080/getClients");
 		return parseClientsDetails(response);
 	}
 
+	/**
+	 *
+	 * @param jsonResponse la reponse de getClients
+	 * @return une liste de string des clients formattes
+	 */
 	private List<String> parseClientsDetails(String jsonResponse) {
 		List<String> clientsDetails = new ArrayList<>();
 
@@ -48,6 +60,11 @@ public class ConsommationRest {
 		return clientsDetails;
 	}
 
+	/**
+	 * Consommme le GET du service REST
+	 * @param url l'url du GET
+	 * @return le contenu du GET
+	 */
 	private String GET(String url) {
 		String content = null;
 
