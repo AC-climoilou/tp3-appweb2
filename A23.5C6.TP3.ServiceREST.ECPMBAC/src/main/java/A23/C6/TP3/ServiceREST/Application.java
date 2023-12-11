@@ -6,11 +6,14 @@ import A23.C6.TP3.ServiceREST.database.Route;
 import A23.C6.TP3.ServiceREST.route.RequeteREST;
 import A23.C6.TP3.ServiceREST.route.RouteManager;
 import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.jdbc.core.JdbcTemplate;
+
+import java.util.ArrayList;
 
 @SpringBootApplication
 public class Application {
@@ -19,19 +22,6 @@ public class Application {
 
 	public static void main(String[] args) {
 		SpringApplication.run(Application.class, args);
-		JsonManager test = new JsonManager();
-		JSONArray json = test.getClientsFromJson();
-		Entrepot entrepot = test.getEntrepot();
-		int test2 = 0;
-
-		Client[] tabClient = new JsonManager().getTabClientFromJSON();
-		String[] tabAdresse = new String[tabClient.length];
-		for(int i = 0; i < tabClient.length; i++)
-		{
-			tabAdresse[i] = tabClient[i].getAdresse();
-		}
-
-		RouteManager.getOptimizedRouteAddresseArray(tabAdresse, "180 9em rue quebec");
 	}
 
 	/**
@@ -74,4 +64,6 @@ public class Application {
 	public void setAdresse(String adresse) {
 		this.adresse = adresse;
 	}
+
+
 }
