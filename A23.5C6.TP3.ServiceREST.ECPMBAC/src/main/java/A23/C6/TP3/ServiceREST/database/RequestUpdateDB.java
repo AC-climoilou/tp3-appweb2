@@ -7,15 +7,14 @@ import org.json.simple.JSONObject;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class RequestUpdateDB {
+
+    @CrossOrigin(origins = "http://localhost:3000")
     @GetMapping(value = "/getRoute")
-    public ResponseEntity<JSONArray> getClients() {
+    public ResponseEntity<JSONArray> getRouteOptimal() {
         DatabaseManager databaseManager = new DatabaseManager(new JdbcTemplate());
         Route route = databaseManager.getRouteEntity().get(0);
         JSONArray jsRoute = new JSONArray();
@@ -24,7 +23,7 @@ public class RequestUpdateDB {
     }
 
     @PutMapping(value = "/putRoute")
-    public ResponseEntity<String> remplacePersonne(@RequestBody Route newRoute) {
+    public ResponseEntity<String> remplacerRoute(@RequestBody Route newRoute) {
         DatabaseManager databaseManager = new DatabaseManager(new JdbcTemplate());
         databaseManager.replaceRouteEntity(newRoute);
         return new ResponseEntity<>("Route replaced", HttpStatus.CREATED);
