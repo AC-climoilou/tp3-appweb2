@@ -9,7 +9,9 @@ import modele.ConsommationRest;
 import java.util.ArrayList;
 import java.util.List;
 
-
+/**
+ * Controleur graphique de app.fxml
+ */
 public class AppControleurFX {
 
     // Variables
@@ -24,7 +26,10 @@ public class AppControleurFX {
     private List<String> selectionList;
 
     // Méthodes
-    // Charge les adresses de la bd
+
+    /**
+     * Charge les adresses des clients dans la listView de gauche
+     */
     @FXML
     public void chargerOnClick(){
         listViewAdresses.getItems().clear();
@@ -34,6 +39,9 @@ public class AppControleurFX {
         }
     }
 
+    /**
+     * Ajoute les adresses selectionnees dans la listeView de droite
+     */
     @FXML
     public void ajouterAdresseOnClick(){
         ObservableList<String> selectedItems = listViewAdresses.getSelectionModel().getSelectedItems();
@@ -45,7 +53,9 @@ public class AppControleurFX {
         }
     }
 
-    // Genere la route optimale en fonction des adresses selectionnées
+    /**
+     * Genere la route optimale en fonction des adresses dans la listView
+     */
     @FXML
     public void genererOnClick(){
         selectionList = listViewRoute.getItems();
@@ -53,6 +63,9 @@ public class AppControleurFX {
 
     }
 
+    /**
+     * Initialise des parametres au lancement de l'application
+     */
     @FXML
     public void initialize(){
         listViewAdresses.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
