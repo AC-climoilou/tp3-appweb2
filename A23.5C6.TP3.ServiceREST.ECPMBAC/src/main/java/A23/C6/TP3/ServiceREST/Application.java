@@ -2,7 +2,9 @@ package A23.C6.TP3.ServiceREST;
 
 import A23.C6.TP3.ServiceREST.LectureJSON.*;
 import A23.C6.TP3.ServiceREST.database.DatabaseManager;
+import A23.C6.TP3.ServiceREST.database.Route;
 import A23.C6.TP3.ServiceREST.route.RequeteREST;
+import A23.C6.TP3.ServiceREST.route.RouteManager;
 import org.json.simple.JSONArray;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -22,6 +24,14 @@ public class Application {
 		Entrepot entrepot = test.getEntrepot();
 		int test2 = 0;
 
+		Client[] tabClient = new JsonManager().getTabClientFromJSON();
+		String[] tabAdresse = new String[tabClient.length];
+		for(int i = 0; i < tabClient.length; i++)
+		{
+			tabAdresse[i] = tabClient[i].getAdresse();
+		}
+
+		RouteManager.getOptimizedRouteAddresseArray(tabAdresse, "180 9em rue quebec");
 	}
 
 	/**

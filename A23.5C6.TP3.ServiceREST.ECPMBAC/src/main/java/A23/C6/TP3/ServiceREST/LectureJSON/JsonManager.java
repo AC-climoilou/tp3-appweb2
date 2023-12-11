@@ -8,6 +8,30 @@ import java.util.Scanner;
 
 public class JsonManager
 {
+    public Client[] getTabClientFromJSON()
+    {
+        JSONArray jsonArray = getClientsFromJson();
+
+        JSONObject jsonObject1 = (JSONObject) jsonArray.get(0);
+        JSONArray jsonArray2 = (JSONArray) jsonObject1.get("clients");
+        Client[] tabClient = new Client[jsonArray2.size()];
+
+        for(int i = 0; i < jsonArray2.size(); i++)
+        {
+            Client client = new Client();
+            JSONObject object = (JSONObject) jsonArray2.get(i);
+
+            client.setNom((String) object.get("nom"));
+            client.setAdresse((String) object.get("adresse"));
+            
+            tabClient[i] = client;
+        }
+
+
+
+        return tabClient;
+    }
+
     public JSONArray getClientsFromJson()
     {
         try
