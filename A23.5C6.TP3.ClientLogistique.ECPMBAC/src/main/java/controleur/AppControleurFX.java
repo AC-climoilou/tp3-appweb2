@@ -24,6 +24,7 @@ public class AppControleurFX {
 
     private List<String> adresseList;
     private List<String> selectionList;
+    private String routeOptimale;
 
     // Méthodes
 
@@ -44,23 +45,39 @@ public class AppControleurFX {
      */
     @FXML
     public void ajouterAdresseOnClick(){
-        ObservableList<String> selectedItems = listViewAdresses.getSelectionModel().getSelectedItems();
+        if (!listViewAdresses.getSelectionModel().getSelectedItems().isEmpty()){
+            ObservableList<String> selectedItems = listViewAdresses.getSelectionModel().getSelectedItems();
 
-        for (String coordonnees: selectedItems) {
-            if (!listViewRoute.getItems().contains(coordonnees)) {
-                listViewRoute.getItems().add(coordonnees);
+            for (String coordonnees: selectedItems) {
+                if (!listViewRoute.getItems().contains(coordonnees)) {
+                    listViewRoute.getItems().add(coordonnees);
+                }
             }
         }
     }
+
+    @FXML
+    public void enleverAdresseOnClick() {
+        if (!listViewRoute.getSelectionModel().getSelectedItems().isEmpty()){
+            ObservableList<String> selectedItems = listViewRoute.getSelectionModel().getSelectedItems();
+
+            for (int i = selectedItems.size() - 1; i >= 0; i--) {
+                listViewRoute.getItems().remove(selectedItems.get(i));
+            }
+        }
+    }
+
 
     /**
      * Genere la route optimale en fonction des adresses dans la listView
      */
     @FXML
     public void genererOnClick(){
-        selectionList = listViewRoute.getItems();
-
-
+        if (!listViewRoute.getItems().isEmpty()){
+            selectionList = listViewRoute.getItems();
+            consommationRest.POST(selectionList);
+            consommationRest.PUT();
+        }
     }
 
     /**
@@ -69,6 +86,7 @@ public class AppControleurFX {
     @FXML
     public void initialize(){
         listViewAdresses.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
+        listViewRoute.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
 
         adresseList = new ArrayList<>();
 
