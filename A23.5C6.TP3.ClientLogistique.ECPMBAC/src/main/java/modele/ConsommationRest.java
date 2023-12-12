@@ -10,9 +10,7 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 /**
  * Consomme le service REST
@@ -27,7 +25,7 @@ public class ConsommationRest {
 	 * @return response du service REST
 	 */
 	public List<String> getAllClientsDetails() {
-		String response = GET("http://localhost:8080/getClients");
+		String response = GET("http://localhost:8080/tp3-prod/getClients");
 		return parseClientsDetails(response);
 	}
 
@@ -108,7 +106,7 @@ public class ConsommationRest {
 
 		try {
 
-			URL url = new URL("http://localhost:8080/postOptimizeRoute");
+			URL url = new URL("http://localhost:8080/tp3-prod/postOptimizeRoute");
 			HttpURLConnection conn = (HttpURLConnection) url.openConnection();
 			conn.setDoOutput(true);
 			conn.setRequestMethod("POST");
@@ -156,7 +154,7 @@ public class ConsommationRest {
 	 */
 	public boolean PUT() {
 		try {
-			URL url = new URL("http://localhost:8080/putRoute");
+			URL url = new URL("http://localhost:8080/tp3-prod/putRoute");
 			HttpURLConnection conn = (HttpURLConnection) url.openConnection();
 			conn.setDoOutput(true);
 			conn.setRequestMethod("PUT");

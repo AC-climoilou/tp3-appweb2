@@ -4,7 +4,7 @@ const RouteOptimale = () => {
   const [routeOptimale, setRouteOptimale] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:8080/getRoute')
+    fetch('http://localhost:8080/tp3-prod/getRoute')
       .then(response => response.json())
       .then(data => {
         const routeArray = data[0].split(' & ');

@@ -33,6 +33,8 @@ public class AppControleurFX {
      */
     @FXML
     public void chargerOnClick(){
+        adresseList = consommationRest.getAllClientsDetails();
+
         listViewAdresses.getItems().clear();
 
         for (String s : adresseList) {
@@ -91,7 +93,5 @@ public class AppControleurFX {
         adresseList = new ArrayList<>();
 
         consommationRest = new ConsommationRest();
-
-        adresseList = consommationRest.getAllClientsDetails();
     }
 }
