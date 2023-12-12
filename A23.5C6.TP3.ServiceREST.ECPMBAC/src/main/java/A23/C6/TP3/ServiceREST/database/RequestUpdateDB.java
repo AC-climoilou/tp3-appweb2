@@ -26,14 +26,6 @@ public class RequestUpdateDB {
     @Autowired
     private JdbcTemplate jdbcTemplate;
 
-//    @GetMapping(value = "/getRoute")
-//    public ResponseEntity<JSONArray> getRouteOptimal() {
-//        Route route = jdbcTemplate.queryForObject("SELECT * FROM route WHERE id = 1", new TP3RouteRowMapper());
-//        JSONArray jsRoute = new JSONArray();
-//        jsRoute.add(route.getRoute());
-//        return new ResponseEntity<>(jsRoute, HttpStatus.OK);
-//    }
-
     @GetMapping(value = "/getRoute")
     public ResponseEntity<JSONArray> getRouteOptimal() {
         DatabaseManager databaseManager = new DatabaseManager(jdbcTemplate);

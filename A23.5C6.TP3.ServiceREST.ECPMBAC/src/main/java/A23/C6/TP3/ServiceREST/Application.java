@@ -10,9 +10,6 @@ import org.springframework.jdbc.core.JdbcTemplate;
 @SpringBootApplication
 public class Application {
 
-	private boolean conditionTestGetRoute = true;
-	private JdbcTemplate jdbcTemplate;
-	private DatabaseManager databaseManager;
 
 	public static void main(String[] args) {
 		SpringApplication.run(Application.class, args);
@@ -29,30 +26,9 @@ public class Application {
 	public CommandLineRunner getRoute(JdbcTemplate jdbcTemplate, DatabaseManager databaseManager) {
 		return args -> {
 
-
-			if (conditionTestGetRoute) {
-				//get current route
-				//newDatabaseManager.getRouteEntity().forEach(System.out::println);
-				setData(jdbcTemplate, databaseManager);
-
-				//update current toute
-				//newDatabaseManager.replaceRouteEntity(new Route("BBBBBBBBBBB"));
-			}
 		};
 	}
 
-	private void setData(JdbcTemplate jdbcTemplate, DatabaseManager newDatabaseManager) {
-		this.jdbcTemplate = jdbcTemplate;
-		this.databaseManager = newDatabaseManager;
-	}
-
-	public DatabaseManager getDatabaseManager() {
-		return this.databaseManager;
-	}
-
-	public JdbcTemplate getJdbcTemplate() {
-		return this.jdbcTemplate;
-	}
 
 	private String nom;
 

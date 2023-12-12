@@ -7,6 +7,9 @@ import org.springframework.context.annotation.Configuration;
 
 import javax.sql.DataSource;
 
+/**
+ * adaptateur pour les nouvelles instances de jdbc pour la connexion database
+ */
 @Configuration
 public class DataSourceConfig {
 
@@ -14,7 +17,7 @@ public class DataSourceConfig {
     public DataSource dataSource() {
         // Configure your DataSource here, for example, using HikariCP
         HikariConfig config = new HikariConfig();
-        config.setJdbcUrl("jdbc:mysql://127.0.0.1:3306/TP3Route");
+        config.setJdbcUrl("jdbc:mysql://110.0.0.6:3306/TP3Route");
         config.setUsername("root");
         config.setPassword("");
 
