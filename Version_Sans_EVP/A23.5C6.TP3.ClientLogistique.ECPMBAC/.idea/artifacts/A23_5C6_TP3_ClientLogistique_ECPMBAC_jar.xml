@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="A23.5C6.TP3.ClientLogistique.ECPMBAC:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/A23_5C6_TP3_ClientLogistique_ECPMBAC_jar</output-path>
+    <root id="archive" name="A23.5C6.TP3.ClientLogistique.ECPMBAC.jar">
+      <element id="module-output" name="A23.5C6.TP3.ClientLogistique.ECPMBAC" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/junit/junit/4.10/junit-4.10.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/hamcrest/hamcrest-core/1.1/hamcrest-core-1.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/googlecode/json-simple/json-simple/1.1.1/json-simple-1.1.1.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
