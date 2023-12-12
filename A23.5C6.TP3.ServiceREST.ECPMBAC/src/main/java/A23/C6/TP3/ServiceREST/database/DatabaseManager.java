@@ -31,8 +31,8 @@ public class DatabaseManager {
      * permet de remplacer la route dans la table route
      * @param route
      */
-    public void replaceRouteEntity(Route route) {
+    public void replaceRouteEntity(String route) {
         String sql = "UPDATE route SET route = ? WHERE id = 1";
-        jdbcTemplate.update(sql, route.getRoute());
+        jdbcTemplate.update(sql, route);
     }
 }

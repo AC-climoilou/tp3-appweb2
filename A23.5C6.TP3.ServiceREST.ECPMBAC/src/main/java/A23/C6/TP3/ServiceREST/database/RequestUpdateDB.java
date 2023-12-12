@@ -36,7 +36,7 @@ public class RequestUpdateDB {
     }
 
     @PutMapping(value = "/putRoute")
-    public ResponseEntity<String> remplacerRoute(@RequestBody Route newRoute) {
+    public ResponseEntity<String> remplacerRoute(@RequestBody String newRoute) {
         DatabaseManager databaseManager = new DatabaseManager(jdbcTemplate);
         databaseManager.replaceRouteEntity(newRoute);
         return new ResponseEntity<>("Route replaced", HttpStatus.CREATED);

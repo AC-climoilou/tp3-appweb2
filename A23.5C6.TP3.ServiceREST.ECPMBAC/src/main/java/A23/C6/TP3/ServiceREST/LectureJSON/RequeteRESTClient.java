@@ -12,7 +12,7 @@ import java.util.ArrayList;
 @RestController
 public class RequeteRESTClient {
 
-    @GetMapping(value = "getClients")
+    @GetMapping(value = "/getClients")
     public ResponseEntity<JSONArray> getClients()
     {
         JsonManager manager = new JsonManager();

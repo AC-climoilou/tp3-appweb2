@@ -43,10 +43,12 @@ public class RequeteREST
         String resultatFinal = "";
         resultatFinal += routeFinal[0];
 
-        for(int i = 1; i < routeFinal.length; i++)
+        for(int i = 1; i < routeFinal.length - 1; i++)
         {
-            resultatFinal += "&" + routeFinal[i];
+            resultatFinal += " & " + routeFinal[i];
         }
+
+        System.out.println(resultatFinal);
 
         return new ResponseEntity<>(resultatFinal, HttpStatus.CREATED);
     }
