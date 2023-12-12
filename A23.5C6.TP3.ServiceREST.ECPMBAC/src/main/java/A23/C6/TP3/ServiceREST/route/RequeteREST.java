@@ -48,6 +48,6 @@ public class RequeteREST
             resultatFinal += "&" + routeFinal[i];
         }
 
-        return new ResponseEntity<>(resultatFinal, HttpStatus.OK);
+        return new ResponseEntity<>(resultatFinal, HttpStatus.CREATED);
     }
 }
