@@ -4,10 +4,11 @@ const RouteOptimale = () => {
   const [routeOptimale, setRouteOptimale] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:8080/getRoute')
+    fetch('http://localhost:8080/tp3-prod/getRoute')
       .then(response => response.json())
       .then(data => {
-        setRouteOptimale(data);
+        const routeArray = data[0].split(' & ');
+        setRouteOptimale(routeArray);
       })
       .catch(error => {
         console.error('Error fetching data:', error);
@@ -17,8 +18,9 @@ const RouteOptimale = () => {
   return (
     <div>
       <h1>Route Optimale</h1>
-
-      <h3>{routeOptimale}</h3>
+      {routeOptimale.map((item, index) => (
+        <p key={index}>{index + 1}. {item}</p>
+      ))}
     </div>
   );
 };

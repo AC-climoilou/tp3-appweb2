@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"A23.C6.TP3.ServiceREST"},{"l":"A23.C6.TP3.ServiceREST.database"},{"l":"A23.C6.TP3.ServiceREST.LectureJSON"},{"l":"A23.C6.TP3.ServiceREST.route"},{"l":"All Packages","u":"allpackages-index.html"}];updateSearchResults();

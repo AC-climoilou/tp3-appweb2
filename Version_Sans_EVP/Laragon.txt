@@ -1,0 +1,12 @@
+Database: TP3Route
+
+Queries:
+create table route (
+	id int  auto_increment primary key,
+    route text(65535)
+);
+
+INSERT INTO route
+VALUES (1, ' ');
+
+SELECT * FROM route;
