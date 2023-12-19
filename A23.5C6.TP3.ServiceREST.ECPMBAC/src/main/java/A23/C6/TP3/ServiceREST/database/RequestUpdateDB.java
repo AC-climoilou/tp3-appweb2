@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 public class RequestUpdateDB {
 
-    @CrossOrigin(origins = "http://localhost:3000")
     @GetMapping(value = "/getRoute")
     public ResponseEntity<JSONArray> getRouteOptimal() {
         DatabaseManager databaseManager = new DatabaseManager(new JdbcTemplate());
