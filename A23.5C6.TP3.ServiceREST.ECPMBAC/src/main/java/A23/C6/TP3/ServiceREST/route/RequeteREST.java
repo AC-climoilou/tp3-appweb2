@@ -33,7 +33,10 @@ public class RequeteREST
     @PostMapping(value = "postOptimizeRoute")
     public ResponseEntity<String> getRouteOptimizes(@RequestBody RequeteRoute requete)
     {
+
+
         System.out.println("Methode commence");
+
 
         String[] routeFinal = RouteManager.getOptimizedRouteAddresseArray(requete.adresses, requete.depard);
 
